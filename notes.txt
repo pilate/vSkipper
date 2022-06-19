@@ -1,0 +1,94 @@
+vudu player callbacks:
+
+    onTimerEvent
+    onPlayerTime
+    onPlayerTime
+    onPlayerEnded
+    onPlayerLicenseRequest
+    onPlayerLaunchError
+    onPlayerChangedBitrateIndex
+    onPlayerLoadedBitrates
+    onPlayerError
+    onPlayerBufferUnderrun
+    onPlayerPlaying
+    onPlayerNetLog
+    onNetStats
+    onNetStatsV3
+    onCmdPause
+    onCmdResume
+    onCmdSeek
+    onCmdVolume
+    onAudioTracksReceived
+    onActiveAudioTrackReceived
+    onCmdAudioTrack
+    onCmdSubtitles
+    onSetQuality
+    onCmdExit
+    onPlayerPaused
+    onPlayerSeeking
+    onPlayerSeeked
+    onPlayerEnterPip
+    onPlayerLeftPip
+
+vudu javascript events:
+
+    AUTOPLAY_DISABLED: "AUTOPLAY_DISABLED"
+    AVOD_SESSION_EXPIRED: "AVOD_SESSION_EXPIRED",
+    BUFFER_UNDERRUN: "PLAYER_BUFFER_UNDERRUN",
+    DISCONNECT: "PLAYBACK_COMMAND_DISCONNECT",
+    DISMISS: "PLAYBACK_COMMAND_DISMISS",
+    DOWNLOAD_CONFLICT: "DOWNLOAD_CONFLICT",
+    ENDED: "PLAYER_ENDED",
+    ENTER_PIP: "ENTER_PIP",
+    ERROR: "ERROR",
+    ERROR: "PLAYER_ERROR",
+    EXIT: "PLAYBACK_COMMAND_EXIT",
+    HANDLE_AUTOPLAY_DISABLED: "HANDLE_AUTOPLAY_DISABLED"
+    HANDLE_HDCP: "HANDLE_HDCP",
+    HANDLE_PLAYER_ERROR: "HANDLE_PLAYER_ERROR"
+    INIT_RESUME: "PLAYBACK_INIT_RESUME",
+    LEAVE_PIP: "LEAVE_PIP",
+    LICENSEREQUEST: "PLAYER_LICENSEREQUEST",
+    MEDIAHUB_COMMAND: "MEDIAHUB_COMMAND",
+    NETSTATS: "PLAYER_NETSTATS",
+    NETSTATSV3: "PLAYER_NETSTATSV3",
+    NOT_OWNED: "NOT_OWNED",
+    NO_RIGHTS_FOR_VIDEO_QUALITY: "NO_RIGHTS_FOR_VIDEO_QUALITY",
+    NO_SECURE_CONNECTION: "NO_SECURE_CONNECTION",
+    PAUSE: "PLAYBACK_COMMAND_PAUSE",
+    PIP_ENTERED: "PIP_ENTERED",
+    PIP_LEFT: "PIP_LEFT",
+    PLAY: "PLAYER_PLAY",
+    PLAYBACK_STARTED_ON_ANOTHER_DEVICE: "PLAYBACK_STARTED_ON_ANOTHER_DEVICE",
+    PLAYER_ERROR: "PLAYER_ERROR",
+    PLAYER_LAUNCH_ERROR: "PLAYER_LAUNCH_ERROR",
+    PLAY_NEXT_EPISODE: "PLAY_NEXT_EPISODE",
+    RESUME: "PLAYBACK_COMMAND_RESUME",
+    SEEK: "PLAYBACK_COMMAND_SEEK",
+    SET_AUDIO_TRACK: "PLAYBACK_COMMAND_SET_AUDIO_TRACK",
+    SET_CLEARPLAY_FILTER: "PLAYBACK_COMMAND_SET_CLEARPLAY_FILTER",
+    SET_FULLSCREEN: "PLAYBACK_COMMAND_FULLSCREEN",
+    SET_QUALITY: "PLAYBACK_COMMAND_SET_QUALITY",
+    SET_QUALITY_READY: "PLAYBACK_COMMAND_SET_QUALITY_READY",
+    SET_STREAMING_ALGORITHM: "PLAYER_SET_STREAMING_ALGORITHM",
+    SET_SUBSLANGUAGE: "PLAYBACK_COMMAND_SET_SUBSLANGUAGE",
+    SET_SUBTITLES: "PLAYBACK_COMMAND_SET_SUBTITLES",
+    SET_VOLUME: "PLAYBACK_COMMAND_SET_VOLUME"
+    STARTED: "PLAYER_STARTED",
+    TIME: "PLAYER_TIME"
+    ULTRA_VIOLET_LINK_REQUIRED: "ULTRA_VIOLET_LINK_REQUIRED",
+    ULTRA_VIOLET_REJECTED: "ULTRA_VIOLET_REJECTED",
+    UNABLE_TO_PLAY: "UNABLE_TO_PLAY",
+    UNKNOWN_CONTENT: "UNKNOWN_CONTENT"
+
+how to:
+
+window.playerControl.subscribeHelper.subscribe("PLAYER_TIME", function (a, b, c) { console.log(a, b, c); })
+
+> {duration: 1382, playbackType: 'PURCHASED_CONTENT', time: 5} {duration: 1382, playbackType: 'PURCHASED_CONTENT', time: 5} undefined
+
+window.playerControl.subscribeHelper.subscribe("PLAYER_PLAY", function (a, b, c) { console.log(a, b, c); })
+
+{player: fl}
+player: fl
+contentId: "198443"

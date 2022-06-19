@@ -1,0 +1,12 @@
+{
+    "manifest_version": 2,
+    "name": "vSkipper",
+    "version": "0.1",
+
+    "description": "Lets users skip intros, recaps, etc. on streaming sites.",
+
+    "content_scripts": [{
+        "matches": ["https://*.vudu.com/*"],
+        "js": ["js/vskipdb.js", "js/vskipper.js"]
+    }]
+}
