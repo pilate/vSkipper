@@ -20,15 +20,11 @@ function skipCheck(contentId, time, duration) {
             continue;
 
         for (var i=0; i<skips.length; i++) {
-            var skip = skips[i];
+            var [skipStart, skipEnd] = skips[i];
+            skipEnd = skipEnd || duration;
 
-            if (skip.length == 1) {
-                if (time > skip[0]) {
-                    hits[category] = Math.max(duration, hits[category] || 0);
-                }
-            }
-            else if ((skip[0] + skip[1]) > time > skip[0]) {
-                hits[category] = Math.max(skip[0] + skip[1], hits[category] || 0);
+            if ((skipStart <= time) && (skipEnd > time)) {
+                hits[category] = Math.max(skipEnd, hits[category] || 0);
             }
         }
     }
