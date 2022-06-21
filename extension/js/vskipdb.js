@@ -89,5 +89,14 @@ const VSKIPDB = {
         "credits": [
             [1253]
         ]
+    },
+    "198493": {
+        "_description": "The Office - S02E05",
+        "intro": [
+            [88, 121]
+        ],
+        "credits": [
+            [1283]
+        ]
     }
 }
